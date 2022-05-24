@@ -39,19 +39,19 @@ class doubleList {
         this.tail = newNode;
       } else {
         // 情况4：0 < position < this.length
-        let current = this.head;
+        let currentNode = this.head;
         let index = 0;
 
         while (index < position) {
-          current = current.next;
+          currentNode = currentNode.next;
           index++;
         }
 
         //修改pos位置前后节点变量的指向
-        newNode.next = current;
-        newNode.prev = current.pre;
-        current.prev.next = newNode;
-        current.prev = newNode;
+        newNode.next = currentNode;
+        newNode.prev = currentNode.pre;
+        currentNode.prev.next = newNode;
+        currentNode.prev = newNode;
       }
     }
     this.length++;
@@ -88,11 +88,11 @@ class doubleList {
       } else {
         let index = 0;
         while (index < position) {
-          current = current.next;
+          currentNode = currentNode.next;
           index++;
         }
-        current.pre.next = current.next;
-        current.next.pre = current.pre;
+        currentNode.pre.next = currentNode.next;
+        currentNode.next.pre = currentNode.pre;
       }
     }
     this.length--;
@@ -122,11 +122,13 @@ class doubleList {
         index--;
       }
     }
-    return current.data;
+    return currentNode.data;
   }
 }
 let list = new doubleList();
 list.insertElem(0, 'a');
 list.insertElem(1, 'b');
 list.remove('a');
-console.log(list);
+let res = list.getElem(0);
+
+console.log(list, res);
