@@ -7,7 +7,7 @@
  * @return {number}
  */
 // 自己的解法:遍历数组,如果有相同的,删除数据，然后递归
-var removeDuplicates = function (nums) {
+var removeDuplicatesSelf = function (nums) {
   for (let i = 0; i < nums.length; i++) {
     if (nums[i] === nums[i + 1]) {
       nums.splice(i, 1);
@@ -15,6 +15,20 @@ var removeDuplicates = function (nums) {
     }
   }
   return nums.length;
+};
+var removeDuplicatesSelf2 = function (nums) {
+  let slow,
+    fast = 1;
+  if (nums.length === 0) {
+    return 0;
+  }
+  while (fast < nums.length) {
+    if (nums[fast] !== nums[fast - 1]) {
+      nums[slow] = nums[fast];
+      ++slow;
+    }
+    ++fast;
+  }
 };
 // 官方题解：双指针
 var removeDuplicates = function (nums) {
