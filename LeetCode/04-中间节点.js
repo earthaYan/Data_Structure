@@ -23,7 +23,7 @@ var middleNodeSelf = function (head) {
     listLen++;
     currentNode = currentNode.next;
   }
-
+  // 相对官方题解的同样思路,实现上出现了差错,第二次遍历的时候,while的条件应该是k<targetIndex
   let targetIndex =
     listLen % 2 === 0 ? listLen / 2 + 1 : Math.ceil(listLen / 2);
   currentNode = head;
@@ -39,7 +39,7 @@ var middleNodeSelf = function (head) {
     currentNode = currentNode.next;
   }
 };
-// 官方解法:
+// 官方解法1:
 /**
  * 
 链表的缺点在于不能通过下标访问对应的元素。
@@ -52,7 +52,7 @@ var middleNode = function (head) {
   return A[Math.trunc(A.length / 2)];
 };
 /**
- * 单指针法
+ * 官方题解2:单指针法
  * 我们可以对方法一进行空间优化，省去数组 A。
 我们可以对链表进行两次遍历。
 第一次遍历时，我们统计链表中的元素个数 N；
