@@ -24,6 +24,7 @@ var middleNodeSelf = function (head) {
     currentNode = currentNode.next;
   }
   // 相对官方题解的同样思路,实现上出现了差错,第二次遍历的时候,while的条件应该是k<targetIndex
+  // 以及获取targetIndex上出现问题
   let targetIndex =
     listLen % 2 === 0 ? listLen / 2 + 1 : Math.ceil(listLen / 2);
   currentNode = head;
