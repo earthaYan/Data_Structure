@@ -19,5 +19,4 @@ func maxDepth(root *TreeNode) int {
 	// 二叉树的最大深度
 	// 记录当前深度
 	return computeDepth(root, 0)
-
 }
