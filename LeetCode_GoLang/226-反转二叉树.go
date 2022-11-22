@@ -1,13 +1,17 @@
 package LeetCode_GoLang
 
-func swap() {
-
+func swap(leftTree *TreeNode, rightTree *TreeNode, data int) *TreeNode {
+	// 构建一个新节点，其左右子树分别为原来的子树的相反方向
+	p := &TreeNode{Val: data}
+	p.Right = leftTree
+	p.Left = rightTree
+	return p
 }
 func invertTree(root *TreeNode) *TreeNode {
-	// 后序遍历
-	//翻转左子树
-	// 翻转右子树
-	// 插入节点
-
-	return nil
+	if root == nil {
+		return root
+	}
+	nLeft := invertTree(root.Left)
+	nRight := invertTree(root.Right)
+	return swap(nLeft, nRight, root.Val)
 }
