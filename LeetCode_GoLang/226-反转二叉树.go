@@ -8,6 +8,7 @@ func swap(leftTree *TreeNode, rightTree *TreeNode, data int) *TreeNode {
 	return p
 }
 func invertTree(root *TreeNode) *TreeNode {
+	// 本质上貌似还是后续遍历?
 	if root == nil {
 		return root
 	}
