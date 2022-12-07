@@ -3,7 +3,7 @@ package LeetCode_GoLang
 func UnequalTriplets(nums []int) int {
 	// 需求：找到满足条件的元组个数
 	// 要求：0<=i<j<k<nums.length && 两两互不相等
-	// 暴力破解：时间复杂度O(N^3)
+	// 思路->暴力破解：时间复杂度O(N^3)
 	var count int = 0
 	for i := 0; i < len(nums)-2; i++ {
 		for j := i + 1; j < len(nums)-1; j++ {
