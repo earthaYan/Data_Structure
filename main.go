@@ -6,6 +6,7 @@ func main() {
 
 }
 func init() {
-	numArr := []int{1, 2, 3, 3, 2, 5}
-	LeetCode_GoLang.UnequalTriplets(numArr)
+	nums := []int{0, 2, 2, 3, 0, 4, 2}
+
+	LeetCode_GoLang.RemoveElement(nums, 2)
 }
