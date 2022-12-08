@@ -23,8 +23,6 @@ LOOP:
 			nums[len(nums)-1] = '_'
 			count--
 			goto LOOP
-		} else {
-			continue
 		}
 	}
 	fmt.Print(nums)
