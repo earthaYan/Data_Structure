@@ -27,4 +27,5 @@ LOOP:
 	}
 	fmt.Print(nums)
 	return count
+	// 官方题解是使用双指针
 }
