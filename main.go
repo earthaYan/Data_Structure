@@ -6,7 +6,7 @@ func main() {
 
 }
 func init() {
-	nums := []int{0, 2, 2, 3, 0, 4, 2}
+	nums := []int{1, 1, 3}
 
-	LeetCode_GoLang.RemoveElement(nums, 2)
+	LeetCode_GoLang.RemoveDuplicates(nums)
 }
