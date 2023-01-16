@@ -9,7 +9,8 @@ func main() {
 
 }
 func init() {
-	names := []int{0, 1, 2}
-	res := course.BinarySearch(names, 10, 0, len(names)-1)
+	names := []int{0, 1, 6}
+	ages := []int{2, 3, 7}
+	res := course.MergeArr(names, ages)
 	fmt.Println(res)
 }
