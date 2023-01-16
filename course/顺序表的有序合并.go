@@ -16,6 +16,7 @@ func MergeArr(arr1 []int, arr2 []int) []int {
 			up++
 		}
 	}
+	// 复制后半段
 	if up<len(arr1){
 		merged=append(merged, arr1[up:]...)
 	}else if down<len(arr2){
