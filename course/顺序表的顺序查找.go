@@ -1,7 +1,6 @@
 package course
 
 
-
 func SequentialSearchFromLeft(arr []int, ele int) int {
 	// 顺序查找
 	// 以表的左侧为起点，向另一个端点逐个元素查找
