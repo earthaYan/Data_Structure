@@ -7,7 +7,7 @@ func InsertEleInSpecificPosition1(arr []int, position int, ele int) []int {
 	var newArr = make([]int, arrLen+1)
 	copy(newArr, arr)
 	for j := arrLen - 1; j >= position; j-- {
-		newArr[j+1] = arr[j]
+		newArr[j+1] = arr[j]//后继元素依次右移
 	}
 	newArr[position] = ele
 	fmt.Println(newArr)

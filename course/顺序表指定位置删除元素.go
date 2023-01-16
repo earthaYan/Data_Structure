@@ -3,7 +3,7 @@ package course
 func DelEleInCeratinPosition1(arr []int, position int) {
 	arrLen := len(arr)
 	for j := position; j < arrLen-1; j++ {
-		arr[j] = arr[j+1]
+		arr[j] = arr[j+1]//后继元素依次左移
 	}
 	if position < arrLen {
 		arr = arr[0 : len(arr)-1]
