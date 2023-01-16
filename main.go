@@ -9,30 +9,7 @@ func main() {
 
 }
 func init() {
-	names := []course.Element{
-		{
-			Ceof: 1,
-			Exp:  1,
-		},
-		{
-			Ceof: 2,
-			Exp:  2,
-		},
-		{
-			Ceof: 2,
-			Exp:  3,
-		},
-	}
-	ages := []course.Element{
-		{
-			Ceof: 1,
-			Exp:  2,
-		},
-		{
-			Ceof: 1,
-			Exp:  3,
-		},
-	}
-	res := course.Calculate(names, ages)
+	name := []int{2, 4, 6, 8, 10, 12, 14, 16, 18, 20}
+	res := course.Binary_Search(name, 0, len(name)-1,4)
 	fmt.Println(res)
 }
