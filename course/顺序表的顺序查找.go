@@ -1,6 +1,5 @@
 package course
 
-
 func SequentialSearchFromLeft(arr []int, ele int) int {
 	// 顺序查找
 	// 以表的左侧为起点，向另一个端点逐个元素查找
@@ -39,13 +38,13 @@ func SequentialSearchFromLeftUsingNode(arr []int, ele int) int {
 func SequentialSearchFromRightUsingNode(arr []int, ele int) int {
 	// 顺序查找-使用监督元节点
 	newArr := []int{ele}
-	newArr=append(newArr, arr...)
-	right:=len(newArr)-1
-	for newArr[right]!=ele{
+	newArr = append(newArr, arr...)
+	right := len(newArr) - 1
+	for newArr[right] != ele {
 		right--
 	}
-	if right>0{
-		return right-1
+	if right > 0 {
+		return right - 1
 	}
 	return -1
 }
