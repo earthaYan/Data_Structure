@@ -9,7 +9,8 @@ func main() {
 
 }
 func init() {
-	names := []int{1, 15, 6, 3}
-	res := LeetCode_GoLang.DifferenceOfSum(names)
+	nums1:= []int{1,2}
+	nums2:=[]int{3,4}
+	res := LeetCode_GoLang.FindMedianSortedArrays(nums1,nums2)
 	fmt.Println(res)
 }
