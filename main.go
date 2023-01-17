@@ -2,14 +2,14 @@ package main
 
 import (
 	"fmt"
-	"leet_code_go/course"
+	"leet_code_go/LeetCode_GoLang"
 )
 
 func main() {
 
 }
 func init() {
-	name := []int{2, 4, 6, 8, 10, 12, 14, 16, 18, 20}
-	res := course.Binary_Search(name, 0, len(name)-1,4)
+	names := []int{1, 15, 6, 3}
+	res := LeetCode_GoLang.DifferenceOfSum(names)
 	fmt.Println(res)
 }
